@@ -511,7 +511,7 @@ def question_answering(request):  # index页面需要一开始就加载的内容
 		print(ret_dict)
 
 		if(len(ret_dict)!=0  and ret_dict!=0):
-			return render(request,'question_answering.html',{'ret':ret_dict})
+			return render(request,'question_answering.html',{'ret':ret_dict, 'question': question})
 		print(context)
-		return render(request, 'question_answering.html', {'ctx':'暂未找到答案'})
+		return render(request, 'question_answering.html', {'ctx':'暂未找到答案', 'question': question})
 	return render(request, 'question_answering.html', context)

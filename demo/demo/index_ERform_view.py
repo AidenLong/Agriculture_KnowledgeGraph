@@ -31,7 +31,8 @@ def ER_post(request):
 			text += "<a href='detail.html?title=" + pair[0] + "'  data-original-title='" + get_explain(pair[1]) + "'  data-placement='top' data-trigger='hover' data-content='"+get_detail_explain(pair[1])+"' class='popovers'>" + pair[0] + "</a>"
 		
 		ctx['rlt'] = text
-			
+		ctx['key'] = key
+
 #		while i < length:
 #			# 尝试将2个词组合，若不是NE则组合一个，还不是就直接打印文本
 #			p1 = TagList[i][0]
